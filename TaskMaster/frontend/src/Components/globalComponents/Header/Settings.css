@@ -1,0 +1,167 @@
+/* Settings Menu */
+.menu-overlay {
+    background-color: hsla(0, 0%, 0%, 0.5);
+    height: 100%;
+}
+
+.settings-btn {
+    height: 2.75rem;
+}
+
+.settings-btn[disabled] {
+    opacity: 0.35;
+    cursor: auto;
+}
+
+.user-wrapper {
+    align-items: baseline;
+    gap: 0.5rem;
+    color: var(--primary);
+}
+
+.settings {
+    position: fixed;
+    height: auto;
+    z-index: 999;
+    padding: 5rem 0;
+    background-color: var(--component-bg);
+    border-bottom: 1px solid var(--primary);
+    transition: all 0.5s ease-in-out;
+}
+
+.username-mob {
+    text-transform: capitalize;
+}
+
+@media (max-width: 1024px) {
+    .settings {
+        top: 7.5rem;
+        left: 0;
+        right: 0;
+        transform: translateX(+100%);
+    }
+
+    .settings-open {
+        transform: translateX(0);
+    }
+
+    .username-mob {
+        display: none !important;
+    }
+}
+
+.settings-btn {
+    align-items: center;
+    gap: var(--gap-s);
+}
+
+.settings-p {
+    color: var(--light-grey);
+}
+
+.user-icon {
+    fill: none;
+    stroke: var(--light-grey);
+    width: 2rem;
+    height: 2rem;
+    transform: scale(1.25);
+}
+
+.user-icon.header {
+    fill: none;
+    stroke: var(--primary);
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-top: 0.225rem;
+}
+
+.logout-svg {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.logout-icon {
+    stroke: var(--light-grey);
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.settings-btn:is(:hover, :focus) > .user-icon {
+    stroke: var(--primary);
+}
+
+.settings-btn:is(:hover, :focus) > .logout-svg > .logout-icon {
+    stroke: var(--primary);
+}
+
+.settings-btn:is(:hover, :focus) > .settings-p {
+    color: var(--primary);
+}
+
+/* Theme Mode Selector */
+.theme-mode-wrapper {
+    background-color: var(--bg);
+    padding: 1.75rem;
+}
+
+.theme-mode-container {
+    width: 55%;
+    max-width: 36rem;
+    justify-content: space-between;
+}
+
+.theme-mode-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.theme-mode-btn {
+    position: relative;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    width: 6rem;
+    height: 2.75rem;
+    transition: all 0.35s ease-in-out;
+}
+
+.theme-mode-btn:is(:hover, :focus) {
+    opacity: 0.75;
+}
+
+.theme-mode-btn:after {
+    content: "";
+    position: absolute;
+    top: 8.75%;
+    right: calc(0% + 2.5px);
+    border-radius: 50%;
+    background-color: var(--white);
+    width: 1.95rem;
+    height: 1.95rem;
+    transition: all 0.35s ease-in-out;
+}
+
+.toggle-theme.theme-mode-btn:after {
+    transform: translateX(-3rem);
+}
+
+/* MEDIA QUERY ABOVE 1025px / DESKTOP */
+@media (min-width: 1025px) {
+    .settings {
+        position: fixed;
+        top: 7.5rem;
+        right: 0rem;
+        min-width: 30rem;
+        border: 1px solid var(--primary);
+        border-top: none;
+        opacity: 0;
+    }
+
+    .settings-open {
+        opacity: 1;
+    }
+
+    /* Theme Mode Selector */
+    .theme-mode-wrapper.mobile {
+        display: none;
+    }
+}

@@ -1,0 +1,153 @@
+/* TaskView */
+.taskview-wrapper {
+    padding-top: 3rem;
+}
+
+.task-board-wrapper {
+    gap: var(--gap-m);
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    touch-action: auto;
+    -ms-touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar for chrome*/
+.task-board-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for firefox*/
+.task-board-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.tasks-ul {
+    max-height: 60rem;
+    max-height: 68vh;
+    overflow-y: scroll;
+    scroll-snap-type: x mandatory;
+    touch-action: auto;
+    -ms-touch-action: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar for chrome*/
+.tasks-ul::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for firefox*/
+.tasks-ul::-webkit-scrollbar {
+    display: none;
+}
+
+.task-dots-container {
+    position: fixed;
+    display: flex;
+    gap: var(--gap-xs);
+    top: 10.5rem;
+    right: -11.5%;
+    width: 33%;
+    z-index: 9999;
+}
+
+.task-icon {
+    width: 1em;
+    height: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
+.todo-icon {
+    background-color: var(--primary);
+}
+
+.in-progress-icon {
+    background-color: var(--todo);
+}
+
+.done-icon {
+    background-color: var(--success);
+}
+
+@media (max-width: 1024px) {
+    .task-column {
+        min-width: 100%;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+}
+
+.not-active {
+    transform: scale(1);
+    opacity: 0.35;
+}
+
+.active {
+    transform: scale(1.35);
+    opacity: 1;
+}
+
+.task-column-title-wrapper {
+    gap: 0.75em;
+}
+
+.task-li {
+    position: relative;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    min-height: 10rem;
+    background-color: var(--component-bg);
+}
+
+.edit-task-icon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 0.5rem;
+    height: 2rem;
+}
+
+.add-task-btn.in-board {
+    gap: 1rem;
+    padding: 3rem;
+    min-width: 100%;
+}
+
+/* DESKTOP MEDIA QUERY*/
+@media (min-width: 1025px) {
+    .taskview-wrapper {
+        padding-top: 0;
+    }
+
+    .task-board-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-m);
+        touch-action: none;
+        -ms-touch-action: none;
+        -webkit-overflow-scrolling: none;
+        overflow-x: hidden;
+    }
+
+    .task-board-title {
+        display: none !important;
+    }
+
+    .task-column {
+        min-width: calc(33.33% - var(--gap-m) + 1rem);
+    }
+
+    .task-dots-container {
+        display: none;
+    }
+
+    .tasks-ul {
+        max-height: 80rem;
+        max-height: 80vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        touch-action: pan-y;
+        -ms-touch-action: pan-y;
+    }
+}

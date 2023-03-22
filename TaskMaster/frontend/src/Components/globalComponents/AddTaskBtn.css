@@ -1,0 +1,12 @@
+/*  Add task btn */
+.add-task-btn {
+    background-color: var(--primary);
+    width: 5rem;
+    height: 3rem;
+    place-content: center;
+}
+
+.add-task-btn[disabled] {
+    opacity: 0.35;
+    cursor: auto;
+}

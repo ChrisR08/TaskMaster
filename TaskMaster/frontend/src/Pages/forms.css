@@ -1,0 +1,40 @@
+/* Login Page */
+.form-wrapper {
+    min-height: calc(100vh - 7.5rem);
+}
+
+.login-form {
+    background-color: var(--component-bg);
+    width: 100%;
+    max-width: 50rem;
+    padding: var(--pad-m);
+    margin: auto;
+}
+
+.input {
+    width: 100%;
+    padding: 1rem 3rem;
+    background-color: transparent;
+    color: var(--form-text);
+    border: 1px solid var(--lines);
+}
+
+.input:focus,
+.input:active {
+    outline: none;
+    border: 1px solid var(--primary);
+}
+
+.form-btn {
+    max-width: 100%;
+    padding: 1.25rem 3rem;
+}
+
+.form-btn:hover,
+.form-btn:focus {
+    background-color: var(--primary-hover);
+}
+
+.form-btn:active {
+    background-color: var(--primary-hover);
+}

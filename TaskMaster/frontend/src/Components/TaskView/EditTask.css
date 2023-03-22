@@ -1,0 +1,172 @@
+/* Edit Task Modal*/
+.overlay {
+    position: fixed;
+    inset: 0 0 0 0;
+    padding: 2.5rem;
+    z-index: 9999999;
+    background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+.edit-task-form {
+    position: relative;
+    background-color: var(--component-bg);
+    width: 100%;
+    max-width: 50rem;
+    padding: 3.5rem;
+    margin: auto;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    touch-action: pan-y;
+    -ms-touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+}
+
+.close-form-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 3.5rem;
+}
+
+.close-form-svg {
+    fill: var(--light-grey);
+}
+
+.form-title {
+    color: var(--form-text);
+}
+
+.edit-form-p {
+    color: var(--light-grey);
+}
+
+.edit-input {
+    color: var(--form-text);
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--lines);
+}
+
+.edit-input:focus,
+.edit-input:active {
+    outline: none;
+    border: 1px solid var(--primary);
+}
+
+.edit-input::placeholder {
+    color: var(--light-grey);
+}
+
+.textarea {
+    color: var(--form-text);
+    min-height: 7rem;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--lines);
+}
+
+.textarea::placeholder {
+    color: var(--form-text);
+}
+
+.textarea:is(:hover, :focus) {
+    outline: none;
+    border: 1px solid var(--primary);
+}
+
+/* SubTasks */
+.subtask-wrapper {
+    gap: var(--gap-s);
+}
+
+.delete-subtask {
+    position: relative;
+    fill: var(--error);
+}
+
+.delete-subtask-svg {
+    fill: var(--error);
+}
+
+.delete-subtask-svg:is(:hover, :focus) {
+    fill: var(--error-hover);
+}
+
+/* Select / Options */
+option {
+    background-color: var(--component-bg);
+}
+
+option:checked,
+option:hover,
+option:focus,
+option:active {
+    background-color: var(--component-bg) !important;
+}
+
+/* Form Butons */
+.form-btn {
+    max-width: 100%;
+    padding: 1.25rem 3rem;
+}
+
+.form-btn-primary:is(:hover, :focus, :active) {
+    background-color: var(--primary-hover);
+}
+
+.form-btn-secondary:is(:hover, :focus, :active) {
+    background-color: var(--secondary-hover);
+}
+
+.form-btn-cancel:is(:hover, :focus, :active) {
+    background-color: var(--error-hover);
+}
+
+/* Task Modal */
+.subtasks-inner-wrapper {
+    position: relative;
+    gap: var(--gap-s);
+    color: var(--form-text);
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--lines);
+}
+
+.check-subtask-btn {
+    border: 1px solid var(--lines);
+    background-color: var(--white);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+}
+
+.check-subtask-btn[data-checked="true"] {
+    background-color: var(--primary);
+}
+
+.check-subtask-icon {
+    margin-top: 0.75rem;
+    margin-left: 0.35rem;
+    width: 1.75rem;
+    height: 1.5rem;
+    stroke: var(--white);
+    z-index: 999999;
+}
+
+@media (min-width: 1025px) {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .edit-task-form::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .edit-task-form {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}

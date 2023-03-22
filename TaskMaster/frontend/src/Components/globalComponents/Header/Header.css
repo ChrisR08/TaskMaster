@@ -1,0 +1,17 @@
+/* Header */
+.header-wrapper {
+    position: relative;
+    min-height: 7.5rem;
+    background-color: var(--component-bg);
+    z-index: 99999;
+    border-bottom: 1px solid var(--primary);
+}
+
+.header-container {
+    justify-content: space-between;
+    position: relative;
+}
+
+.header-btns-container {
+    gap: 1.5rem;
+}

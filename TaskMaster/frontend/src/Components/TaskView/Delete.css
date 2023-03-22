@@ -1,0 +1,33 @@
+/* Delete Board Modal */
+
+.overlay {
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 99999;
+    background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+.delete-card {
+    background-color: var(--component-bg);
+    max-width: 46rem;
+    margin: auto;
+    padding: 2.5rem;
+}
+
+.delete-card-p {
+    color: var(--light-grey);
+}
+
+.delete-btn,
+.cancel-btn {
+    max-width: 100%;
+    padding: 1.25rem 3rem;
+}
+
+.delete-btn:is(:hover, :focus) {
+    background-color: var(--error-hover);
+}
+
+.cancel-btn:is(:hover, :focus) {
+    background-color: var(--secondary-hover);
+}
